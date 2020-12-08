@@ -1,0 +1,41 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "initail version",
+  "main": "main.js",
+  "author": "virat",
+  "devDependencies": {
+    "electron": "^11.0.4"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "screen_recorder"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "start": "electron ."
+  } 
+}
